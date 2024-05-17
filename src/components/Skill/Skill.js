@@ -54,13 +54,13 @@ function Skill() {
           </div>
         </div>
       </div>
-      <div className="mt-10 transition-opacity duration-300 text-white flex justify-center flex-wrap">
+      <div className="mt-14 transition-opacity duration-300 text-white flex justify-center flex-wrap">
         {activeTab === "skills" &&
           skills.map((skill, index) => (
             <span
               key={index}
               className="skills-card skillsIcon flex flex-col items-center justify-center mobile-margins m-1 relative"
-              data-aos="fade-down"
+              data-aos="zoom-in-down"
               data-aos-anchor-placement="center-bottom"
               onMouseEnter={() => setSelectedItem(skill.name)}
               onMouseLeave={() => setSelectedItem(null)}
@@ -80,7 +80,7 @@ function Skill() {
             <span
               key={index}
               className="skills-card skillsIcon flex flex-col items-center justify-center m-2 relative mobile-margins"
-              data-aos="fade-down"
+              data-aos="zoom-in-down"
               data-aos-anchor-placement="center-bottom"
               onMouseEnter={() => setSelectedItem(tool.name)}
               onMouseLeave={() => setSelectedItem(null)}

@@ -32,7 +32,7 @@ const Navbar = () => {
         >
           <div className="flex">
             <img className="h-20 mt-4" src={animatedLogo} alt="animatedLogo" />
-            <p className="text-white font-bold text-3xl pt-8 sm:hidden md:block lg:block">
+            <p className="text-white font-bold text-3xl pt-8 xs:hidden sm:hidden md:block lg:block">
               {"<SAMEER/>"}
             </p>
           </div>

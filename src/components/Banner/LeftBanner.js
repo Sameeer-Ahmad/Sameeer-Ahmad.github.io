@@ -31,13 +31,13 @@ const LeftBanner = () => {
         <h4 className=" text-lg font-normal">
           EXPERIENCE MY PROFESSIONAL WORLD
         </h4>
-        <h1 className="sm:text-5xl text-6xl font-bold text-white">
+        <h1 className="xs:text-5xl sm:text-5xl text-6xl font-bold text-white">
           Hi, I'm{" "}
           <span className="user-detail-name text-designColor capitalize">
             Sameer
           </span>
         </h1>
-        <h2 className="sm:text-2xl text-4xl  font-bold text-white">
+        <h2 className="xs:text-xl sm:text-2xl text-4xl  font-bold text-white">
           a <span className="sm:text-md">{text}</span>
           <Cursor
             cursorBlinking="false"
