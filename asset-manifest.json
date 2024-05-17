@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.407ba5b1.css",
+    "main.js": "/static/js/main.fab19059.js",
+    "static/js/453.6bc46d96.chunk.js": "/static/js/453.6bc46d96.chunk.js",
+    "static/media/facebook.png": "/static/media/facebook.20b5d98872e45f2705d4.png",
+    "static/media/theArtline.png": "/static/media/theArtline.1397b88811a619a52b66.png",
+    "static/media/Tmetric.png": "/static/media/Tmetric.34b9284ab011224a8222.png",
+    "static/media/Sameer-Ahmad-resume.pdf": "/static/media/Sameer-Ahmad-resume.91133d1a7e8c9782d5c5.pdf",
+    "static/media/mudra.png": "/static/media/mudra.aeb45ac8211bc6b74ebf.png",
+    "static/media/bannerImg.png": "/static/media/bannerImg.99e38a1152d2eacb24b8.png",
+    "static/media/animatedLogo.png": "/static/media/animatedLogo.99ee5d47d8d8a317aac3.png",
+    "static/media/contactImg.jpg": "/static/media/contactImg.6fd3ed68965781234044.jpg",
+    "index.html": "/index.html",
+    "main.407ba5b1.css.map": "/static/css/main.407ba5b1.css.map",
+    "main.fab19059.js.map": "/static/js/main.fab19059.js.map",
+    "453.6bc46d96.chunk.js.map": "/static/js/453.6bc46d96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.407ba5b1.css",
+    "static/js/main.fab19059.js"
+  ]
+}
