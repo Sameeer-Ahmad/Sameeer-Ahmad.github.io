@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Banner from "./components/Banner/Banner";
+import Skill from "./components/Skill/Skill";
+import Projects from "./components/Projects/Projects";
+import GithubCalender from "./components/GithubCalender/GithubCalender";
+import Contact from "./components/Contact/Contact";
+import ChatBotComponent from "./components/ChatBot/ChatBot";
+import GoToTop from "./components/GoToTop/GoToTop";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-auto bg-bodyColor text-lightText px-4">
+      <Navbar />{" "}
+      <div className="max-w-screen-xl mx-auto">
+        <Banner />
+        <Skill />
+        <Projects />
+        <GithubCalender />
+        <Contact />
+        <Footer />
+        <GoToTop />{" "}
+        <ChatBotComponent />
+      </div>
     </div>
   );
 }
