@@ -70,10 +70,12 @@ const ChatBotComponent = () => {
     headerBgColor: "#701a75",
     headerFontSize: "20px",
     botBubbleColor: "#701a75",
-    headerFontColor: "black",
+    headerFontColor: "white",
+    
     botFontColor: "white",
     userBubbleColor: "#212428",
     userFontColor: "white",
+    fontFamily: "Arial, Helvetica, sans-serif",
   };
 
   const config = {

@@ -38,10 +38,10 @@ const GoToTop = () => {
       }}
     >
       <div
-        className="top-btn bg-[#701a75] rounded-full w-14 h-14 flex items-center justify-center shadow-md cursor-pointer animate-bounce"
+        className="top-btn bg-[#701a75]  rounded-full w-14 h-14 flex items-center justify-center shadow-md cursor-pointer animate-bounce"
         onClick={goToBtn}
       >
-        <FaArrowUp className="text-black text-2xl" />
+        <FaArrowUp className="text-white text-2xl" />
       </div>
     </div>
   );

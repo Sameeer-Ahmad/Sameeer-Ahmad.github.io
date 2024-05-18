@@ -1,41 +1,48 @@
 import React, { useState } from "react";
 import Title from "../Layouts/Title";
 import ContactLeft from "./ContactLeft";
-import { useForm } from "@formspree/react";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xkndepek");
+  const [formData, setFormData] = useState({
+    username: "",
+    phoneNumber: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
-  const [processing, setProcessing] = useState(false); // Add p
-  const validateForm = (elements) => {
-    const { username, phoneNumber, email, subject, message } = elements;
+  const [processing, setProcessing] = useState(false);
 
-    if (!username.value) {
+  const validateForm = () => {
+    const { username, phoneNumber, email, subject, message } = formData;
+
+    if (!username.trim()) {
       setErrMsg("Username is required!");
       return false;
     }
-    if (!phoneNumber.value) {
+    if (!phoneNumber.trim()) {
       setErrMsg("Phone number is required!");
       return false;
     }
-    if (!email.value) {
+    if (!email.trim()) {
       setErrMsg("Please give your Email!");
       return false;
     }
     if (
-      !String(email.value)
+      !email
+        .trim()
         .toLowerCase()
         .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/)
     ) {
       setErrMsg("Give a valid Email!");
       return false;
     }
-    if (!subject.value) {
+    if (!subject.trim()) {
       setErrMsg("Please give your Subject!");
       return false;
     }
-    if (!message.value) {
+    if (!message.trim()) {
       setErrMsg("Message is required!");
       return false;
     }
@@ -46,40 +53,62 @@ const Contact = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const isValid = validateForm(e.target.elements);
+    const isValid = validateForm();
 
     if (isValid) {
-      setProcessing(true); // Set processing state to true
-      await handleSubmit(e);
+      setProcessing(true);
+      try {
+        const response = await fetch("https://formspree.io/f/xkndepek", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const result = await response.json();
 
-      if (state.succeeded) {
-        setSuccessMsg(
-          `Thank you ${e.target.elements.username.value}, Your message has been sent successfully!`
-        );
-        e.target.reset();
-      } else if (state.errors?.length > 0) {
+        if (result.ok) {
+          setSuccessMsg(
+            `Thank you ${formData.username}, Your message has been sent successfully!`
+          );
+          setTimeout(() => {
+            setSuccessMsg("");
+          }, 5000);
+          setFormData({
+            username: "",
+            phoneNumber: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        } else {
+          setErrMsg("Something went wrong, please try again.");
+          setTimeout(() => {
+            setErrMsg("");
+          }, 5000);
+        }
+      } catch (error) {
         setErrMsg("Something went wrong, please try again.");
       }
 
-      // Reset processing state and hide messages after 5 seconds
-      setTimeout(() => {
-        setProcessing(false);
-        setSuccessMsg("");
-        setErrMsg("");
-      }, 5000);
+      setProcessing(false);
     }
+  };
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
     <section
       id="contact"
-      className="w-full py-20  border-b-[1px] border-b-black"
+      className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
         <Title title="CONTACT" des="Contact With Me" />
       </div>
       <div className="w-full">
-        <div className="w-full h-auto flex flex-col lgl:flex-row justify-between sm:gap-16 xs:gap-16">
+        <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
             <form
@@ -103,9 +132,10 @@ const Contact = () => {
                   </p>
                   <input
                     name="username"
-                    placeholder="e.g  John Doe"
+                    placeholder="Username"
                     className="contactInput"
-                    type="text"
+                    value={formData.username}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
@@ -117,7 +147,8 @@ const Contact = () => {
                     name="phoneNumber"
                     placeholder="Phone Number"
                     className="contactInput"
-                    type="text"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
                     required
                   />
                 </div>
@@ -128,9 +159,11 @@ const Contact = () => {
                 </p>
                 <input
                   name="email"
-                  placeholder="e.g  johnDoe@example.com"
+                  placeholder="Email"
                   className="contactInput"
                   type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -142,7 +175,8 @@ const Contact = () => {
                   name="subject"
                   placeholder="Subject"
                   className="contactInput"
-                  type="text"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   required
                 />
               </div>
@@ -153,21 +187,24 @@ const Contact = () => {
                 <textarea
                   name="message"
                   className="contactTextArea"
-                  placeholder="Your Message Here..."
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   cols="30"
                   rows="8"
                   required
                 ></textarea>
               </div>
               <div className="w-full">
-                <input
+                <button
                   type="submit"
-                  value="Send"
                   className={`w-full h-12 bg-white font-bold rounded-lg text-base text-black tracking-wider uppercase hover:font-bold hover:text-white hover:contactTextArea duration-300 hover:border-[1px] hover: border-transparent cursor-pointer ${
-                    processing ? "opacity-50 pointer-events-none" : ""
+                    processing ? "opacity-50 cursor-not-allowed" : ""
                   }`}
-                  disabled={state.submitting}
-                />
+                  disabled={processing}
+                >
+                  {processing ? "Sending..." : "Send"}
+                </button>
               </div>
             </form>
           </div>

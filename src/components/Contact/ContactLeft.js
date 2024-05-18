@@ -20,7 +20,7 @@ const ContactLeft = () => {
         <p className="text-base text-white flex items-center gap-2">
           Address:{" "}
           <span className="text-lightText">
-            Siraspur , New Delhi, Delhi, India - 110042
+            Siraspur, New Delhi, Delhi, India - 110042
           </span>
         </p>
         <p className="contact-phone text-base text-white flex items-center gap-2">
