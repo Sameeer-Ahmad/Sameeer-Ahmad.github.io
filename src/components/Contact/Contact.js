@@ -46,7 +46,6 @@ const Contact = () => {
       setErrMsg("Message is required!");
       return false;
     }
-
     setErrMsg("");
     return true;
   };

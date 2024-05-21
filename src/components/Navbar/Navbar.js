@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1JNYpOgqvo2eOrKxeEuRiIfmYQIRDvUVT/view?usp=sharing",
+      "https://drive.google.com/file/d/1JeIGNjxXSGCKiJLs1ZZmlgA365B8EgJI/view?usp=sharing",
       "_blank"
     );
   };

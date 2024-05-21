@@ -22,7 +22,7 @@ const Projects = () => {
           icon1={<BsGithub />}
           icon2={<FaGlobe />}
           link1="https://github.com/Sameeer-Ahmad/Facebook-Clone"
-          link2="https://fbclone2-omega.vercel.app/"
+          link2="https://facebook-clone-woad-xi.vercel.app/"
           src={facebook}
           tag1={<FaReact />}
           tag2={<SiTypescript />}
