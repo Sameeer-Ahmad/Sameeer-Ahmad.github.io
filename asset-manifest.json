@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.82af7a17.css",
-    "main.js": "/static/js/main.dd7939bc.js",
+    "main.css": "/static/css/main.2ee2787b.css",
+    "main.js": "/static/js/main.f69a6b66.js",
     "static/js/453.6bc46d96.chunk.js": "/static/js/453.6bc46d96.chunk.js",
     "static/media/theArtline.png": "/static/media/theArtline.af1f729eaa25220897a9.png",
+    "static/media/contactImg.png": "/static/media/contactImg.c22ba41df4fd8d549bb9.png",
+    "static/media/bannerImg.png": "/static/media/bannerImg.af3f3fc1d6fee794a322.png",
     "static/media/facebook.png": "/static/media/facebook.78c85c1cbcab9778f72d.png",
-    "static/media/sameer-portfolio.png": "/static/media/sameer-portfolio.084ac2baa19cefda3f3c.png",
+    "static/media/sameer-portfolio.png": "/static/media/sameer-portfolio.d0433f66af94a46eafb8.png",
     "static/media/Audio-Insight.png": "/static/media/Audio-Insight.1ed0259b11efc6cc2b5b.png",
-    "static/media/contactImg.png": "/static/media/contactImg.058431b92e9162781ec9.png",
     "static/media/mudra.png": "/static/media/mudra.aeb45ac8211bc6b74ebf.png",
     "static/media/Tmetric.png": "/static/media/Tmetric.c46f812bb7fff5424318.png",
-    "static/media/Sameer-Ahmad-resume.pdf": "/static/media/Sameer-Ahmad-resume.fc5a0e6e5cc353119090.pdf",
-    "static/media/bannerImg.png": "/static/media/bannerImg.911bb2f466909b9e29b5.png",
+    "static/media/Sameer-Ahmad-resume.pdf": "/static/media/Sameer-Ahmad-resume.c5d73c3ecc12eae08e91.pdf",
     "static/media/animatedLogo.png": "/static/media/animatedLogo.99ee5d47d8d8a317aac3.png",
     "index.html": "/index.html",
-    "main.82af7a17.css.map": "/static/css/main.82af7a17.css.map",
-    "main.dd7939bc.js.map": "/static/js/main.dd7939bc.js.map",
+    "main.2ee2787b.css.map": "/static/css/main.2ee2787b.css.map",
+    "main.f69a6b66.js.map": "/static/js/main.f69a6b66.js.map",
     "453.6bc46d96.chunk.js.map": "/static/js/453.6bc46d96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82af7a17.css",
-    "static/js/main.dd7939bc.js"
+    "static/css/main.2ee2787b.css",
+    "static/js/main.f69a6b66.js"
   ]
 }
