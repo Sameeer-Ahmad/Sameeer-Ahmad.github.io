@@ -9,11 +9,13 @@ import { navLinksdata } from "../../constants";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const openResume = () => {
-    window.open(
-      "https://drive.google.com/file/d/1JeIGNjxXSGCKiJLs1ZZmlgA365B8EgJI/view?usp=sharing",
-      "_blank"
-    );
+  const handleResumeDownload = () => {
+    const link = document.createElement("a");
+    link.href = resume;
+    link.download = "Sameer-Ahmad-resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -57,16 +59,15 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <div onClick={openResume}>
-            <a
-              className="text-base font-normal text-gray-300 tracking-wide cursor-pointer hover:text-designColor duration-300 button"
-              href={resume}
-              download="Sameer-Ahmad-resume"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </a>
-          </div>
+          <a
+            className="text-base font-normal text-gray-300 tracking-wide cursor-pointer hover:text-designColor duration-300 button"
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleResumeDownload}
+          >
+            Resume
+          </a>
         </ul>
         <span
           onClick={() => setShowMenu(!showMenu)}
@@ -104,17 +105,16 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <div onClick={openResume}>
-                <a
-                  className="text-base font-normal text-gray-300 tracking-wide cursor-pointer hover:text-designColor duration-300 button"
-                  id="resume-link-1"
-                  href={resume}
-                  download="Sameer-Ahmad-resume"
-                  rel="noopener noreferrer"
-                >
-                  Resume
-                </a>
-              </div>
+              <a
+                className="text-base font-normal text-gray-300 tracking-wide cursor-pointer hover:text-designColor duration-300 button"
+                id="resume-link-1"
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleResumeDownload}
+              >
+                Resume
+              </a>
             </ul>
             <div className="flex flex-col gap-4">
               <h2 className="text-base uppercase font-titleFont mb-4">
@@ -126,15 +126,17 @@ const Navbar = () => {
                     href="https://github.com/Sameeer-Ahmad"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Sameer Ahmad on GitHub"
                   >
                     <FaGithub />
                   </a>
                 </span>
                 <span className="bannerIcon">
                   <a
-                    href="https://www.linkedin.com/feed/"
+                    href="https://www.linkedin.com/in/sameer-ahmad-aa985428b/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Sameer Ahmad on LinkedIn"
                   >
                     <FaLinkedinIn />
                   </a>

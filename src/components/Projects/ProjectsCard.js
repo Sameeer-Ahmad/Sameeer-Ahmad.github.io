@@ -1,7 +1,3 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
 const ProjectsCard = ({
   title,
   des,
@@ -16,6 +12,8 @@ const ProjectsCard = ({
   tag4,
   tag5,
 }) => {
+  const tags = [tag1, tag2, tag3, tag4, tag5].filter(Boolean);
+
   return (
     <div
       data-aos="zoom-in"
@@ -24,9 +22,9 @@ const ProjectsCard = ({
     >
       <div className="w-full h-[80%] overflow-hidden ">
         <img
-          className="w-full h-full object-contain group-hover:scale-110 duration-300 cursor-pointer"
+          className=" w-[500px] max-h-[300px] object-contain group-hover:scale-110 duration-300 cursor-pointer"
           src={src}
-          alt="src"
+          alt={title}
         />
       </div>
       <div className="w-full mt-5 flex flex-col  gap-6">
@@ -36,45 +34,39 @@ const ProjectsCard = ({
               {title}
             </h3>
             <div className="flex gap-2">
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <a
-                  href={link1}
-                  className="project-github-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                    {icon1}
-                  </span>
-                </a>
-              </span>
-              <span className="project-deployed text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <a href={link2} target="_blank" rel="noopener noreferrer">
-                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                    {icon2}
-                  </span>
-                </a>
-              </span>
+              <a
+                href={link1}
+                className="project-github-link text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${title} source code`}
+              >
+                {icon1}
+              </a>
+              <a
+                href={link2}
+                className="project-deployed text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${title} live site`}
+              >
+                {icon2}
+              </a>
             </div>
           </div>
           <p className="project-description text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
             {des}
           </p>
-          <span className="project-tech-stack text-lg mr-5 h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer mt-2">
-            {tag1}
-          </span>
-          <span className="project-tech-stack text-lg mr-5 h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer mt-2">
-            {tag2}
-          </span>
-          <span className="project-tech-stack text-lg mr-5 h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer mt-2">
-            {tag3}
-          </span>
-          <span className="project-tech-stack text-lg mr-5 h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer mt-2">
-            {tag4}
-          </span>
-          <span className="project-tech-stack text-lg mr-5 h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer mt-2">
-            {tag5}
-          </span>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-2">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="project-tech-stack text-lg h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

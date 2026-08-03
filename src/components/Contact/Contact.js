@@ -33,7 +33,7 @@ const Contact = () => {
       !email
         .trim()
         .toLowerCase()
-        .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/)
+        .match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)
     ) {
       setErrMsg("Give a valid Email!");
       return false;
@@ -64,9 +64,7 @@ const Contact = () => {
             "Content-Type": "application/json",
           },
         });
-        const result = await response.json();
-
-        if (result.ok) {
+        if (response.ok) {
           setSuccessMsg(
             `Thank you ${formData.username}, Your message has been sent successfully!`
           );
@@ -111,7 +109,7 @@ const Contact = () => {
           <ContactLeft />
           <div className="w-full lgl:w-[60%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
             <form
-              className="w-full h-[160] flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
+              className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
               onSubmit={handleFormSubmit}
             >
               {errMsg && (
@@ -132,6 +130,7 @@ const Contact = () => {
                   <input
                     name="username"
                     placeholder="Username"
+                    aria-label="Name"
                     className="contactInput"
                     value={formData.username}
                     onChange={handleInputChange}
@@ -145,6 +144,7 @@ const Contact = () => {
                   <input
                     name="phoneNumber"
                     placeholder="Phone Number"
+                    aria-label="Phone number"
                     className="contactInput"
                     value={formData.phoneNumber}
                     onChange={handleInputChange}
@@ -159,6 +159,7 @@ const Contact = () => {
                 <input
                   name="email"
                   placeholder="Email"
+                  aria-label="Email"
                   className="contactInput"
                   type="email"
                   value={formData.email}
@@ -173,6 +174,7 @@ const Contact = () => {
                 <input
                   name="subject"
                   placeholder="Subject"
+                  aria-label="Subject"
                   className="contactInput"
                   value={formData.subject}
                   onChange={handleInputChange}
@@ -187,6 +189,7 @@ const Contact = () => {
                   name="message"
                   className="contactTextArea"
                   placeholder="Message"
+                  aria-label="Message"
                   value={formData.message}
                   onChange={handleInputChange}
                   cols="30"
