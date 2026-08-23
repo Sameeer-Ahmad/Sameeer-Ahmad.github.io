@@ -25,7 +25,8 @@ const Navbar = () => {
       className="w-full h-24 sticky top-0 z-50 -mx-4 bg-bodyColor heroGlow font-titleFont border-b-[1px] border-b-themeBorderStrong"
       style={{ width: "calc(100% + 2rem)" }}
     >
-      <div className="max-w-screen-xl mx-auto h-full flex justify-between items-center">
+      <div className="h-full px-4">
+      <div className="max-w-screen-2xl mx-auto h-full flex justify-between items-center">
       <div>
         <Link
           to="home"
@@ -164,6 +165,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
+      </div>
       </div>
       </div>
     </div>
