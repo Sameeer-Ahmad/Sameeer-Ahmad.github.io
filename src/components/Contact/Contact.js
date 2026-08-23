@@ -99,7 +99,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-20 border-b-[1px] border-b-themeBorder"
     >
       <div className="flex justify-center items-center text-center">
         <Title title="CONTACT" des="Contact With Me" />
@@ -107,24 +107,24 @@ const Contact = () => {
       <div className="w-full">
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
-          <div className="w-full lgl:w-[60%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
+          <div className="w-full lgl:w-[60%] py-10 bg-cardBg flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
             <form
               className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
               onSubmit={handleFormSubmit}
             >
               {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
+                <p className="py-3 bg-cardBgHover shadow-shadowOne text-center text-orange-600 dark:text-orange-400 text-base tracking-wide animate-bounce">
                   {errMsg}
                 </p>
               )}
               {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
+                <p className="py-3 bg-cardBgHover shadow-shadowOne text-center text-green-600 dark:text-green-400 text-base tracking-wide animate-bounce">
                   {successMsg}
                 </p>
               )}
               <div className="w-full flex flex-col lgl:flex-row gap-10">
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-300 uppercase tracking-wide">
+                  <p className="text-sm text-textMuted uppercase tracking-wide">
                     Name
                   </p>
                   <input
@@ -138,7 +138,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-300 uppercase tracking-wide">
+                  <p className="text-sm text-textMuted uppercase tracking-wide">
                     Phone
                   </p>
                   <input
@@ -153,7 +153,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-300 uppercase tracking-wide">
+                <p className="text-sm text-textMuted uppercase tracking-wide">
                   Email
                 </p>
                 <input
@@ -168,7 +168,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-300 uppercase tracking-wide">
+                <p className="text-sm text-textMuted uppercase tracking-wide">
                   Subject
                 </p>
                 <input
@@ -182,7 +182,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-300 uppercase tracking-wide">
+                <p className="text-sm text-textMuted uppercase tracking-wide">
                   Message
                 </p>
                 <textarea
@@ -200,7 +200,7 @@ const Contact = () => {
               <div className="w-full">
                 <button
                   type="submit"
-                  className={`w-full h-12 bg-white font-bold rounded-lg text-base text-black tracking-wider uppercase hover:font-bold hover:text-white hover:contactTextArea duration-300 hover:border-[1px] hover: border-transparent cursor-pointer ${
+                  className={`w-full h-12 bg-buttonBg font-bold rounded-lg text-base text-buttonText tracking-wider uppercase hover:bg-designColor hover:text-white duration-300 cursor-pointer ${
                     processing ? "opacity-50 cursor-not-allowed" : ""
                   }`}
                   disabled={processing}

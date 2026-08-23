@@ -18,11 +18,11 @@ const ProjectsCard = ({
     <div
       data-aos="zoom-in"
       data-aos-anchor-placement="top"
-      className="project-card w-full p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000"
+      className="project-card w-full p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-cardBg group hover:bg-cardBgHover transition-colors duration-1000"
     >
-      <div className="w-full h-[80%] overflow-hidden ">
+      <div className="w-full h-56 rounded-md overflow-hidden bg-cardBgHover">
         <img
-          className=" w-[500px] max-h-[300px] object-contain group-hover:scale-110 duration-300 cursor-pointer"
+          className="w-full h-full object-cover object-top group-hover:scale-110 duration-300 cursor-pointer"
           src={src}
           alt={title}
         />
@@ -36,7 +36,7 @@ const ProjectsCard = ({
             <div className="flex gap-2">
               <a
                 href={link1}
-                className="project-github-link text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                className="project-github-link text-lg w-10 h-10 rounded-full bg-cardBgHover inline-flex justify-center items-center text-textMuted hover:text-designColor duration-300 cursor-pointer"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${title} source code`}
@@ -45,7 +45,7 @@ const ProjectsCard = ({
               </a>
               <a
                 href={link2}
-                className="project-deployed text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer"
+                className="project-deployed text-lg w-10 h-10 rounded-full bg-cardBgHover inline-flex justify-center items-center text-textMuted hover:text-designColor duration-300 cursor-pointer"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${title} live site`}
@@ -54,14 +54,14 @@ const ProjectsCard = ({
               </a>
             </div>
           </div>
-          <p className="project-description text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
+          <p className="project-description text-sm tracking-wide mt-3 text-lightText hover:text-textPrimary duration-300">
             {des}
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-2">
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="project-tech-stack text-lg h-10 rounded-lg inline-flex justify-center items-center text-gray-300 hover:text-designColor duration-300 cursor-pointer"
+                className="project-tech-stack text-lg h-10 rounded-lg inline-flex justify-center items-center text-textMuted hover:text-designColor duration-300 cursor-pointer"
               >
                 {tag}
               </span>

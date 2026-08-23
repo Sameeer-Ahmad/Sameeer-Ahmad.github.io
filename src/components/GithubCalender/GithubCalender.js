@@ -10,7 +10,7 @@ function GithubCalender() {
         data-aos="zoom-in"
         data-aos-anchor-placement="center-bottom"
         id="statistics"
-        className=" pt-20 pb-20 items-center border-b-[1px] font-titleFont border-b-black"
+        className=" pt-20 pb-20 items-center border-b-[1px] font-titleFont border-b-themeBorder"
       >
         <div className="flex justify-center items-center text-center mb-[-30px]">
           <Title des="Github Statistics" />

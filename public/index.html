@@ -4,7 +4,23 @@
     <meta charset="utf-8" />
     <link rel="icon" href="./Logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#212428" />
+    <meta name="theme-color" content="#212428" id="theme-color-meta" />
+    <script>
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("theme");
+          var isDark =
+            stored === "dark" ||
+            (stored !== "light" &&
+              !window.matchMedia("(prefers-color-scheme: light)").matches);
+          if (isDark) {
+            document.documentElement.classList.add("dark");
+          }
+          var meta = document.getElementById("theme-color-meta");
+          if (meta) meta.setAttribute("content", isDark ? "#212428" : "#f3f4f6");
+        } catch (e) {}
+      })();
+    </script>
     <meta
       name="description"
       content="Sameer Ahmad — MERN Stack Developer building performant, user-friendly web apps with React, Next.js, Node.js, and MongoDB."

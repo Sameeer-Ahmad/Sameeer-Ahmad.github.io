@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -18,13 +19,22 @@ module.exports = {
         titleFont: ["Montserrat", "sans-serif"],
       },
       colors: {
-        bodyColor: "#212428",
-        lightText: "#c4cfde",
+        bodyColor: "var(--color-bg)",
+        bgElevated: "var(--color-bg-elevated)",
+        lightText: "var(--color-text-secondary)",
+        textPrimary: "var(--color-text-primary)",
+        textMuted: "var(--color-text-muted)",
+        themeBorder: "var(--color-border)",
+        themeBorderStrong: "var(--color-border-strong)",
+        cardBg: "var(--color-card)",
+        cardBgHover: "var(--color-card-hover)",
+        buttonBg: "var(--color-button-bg)",
+        buttonText: "var(--color-button-text)",
         boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
         designColor: "#701a75",
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOne: "var(--shadow-one)",
       },
     },
   },

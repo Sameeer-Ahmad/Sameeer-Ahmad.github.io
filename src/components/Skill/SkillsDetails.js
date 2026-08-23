@@ -1,56 +1,76 @@
+import html5 from "../../assets/images/skills/html5.png";
+import css3 from "../../assets/images/skills/css3.png";
+import javascript from "../../assets/images/skills/javascript.png";
+import java from "../../assets/images/skills/java.png";
+import react from "../../assets/images/skills/react.png";
+import typescript from "../../assets/images/skills/typescript.png";
+import tailwindcss from "../../assets/images/skills/tailwindcss.png";
+import chakraui from "../../assets/images/skills/chakraui.png";
+import nodejs from "../../assets/images/skills/nodejs.png";
+import bootstrap from "../../assets/images/skills/bootstrap.png";
+import expressjs from "../../assets/images/skills/expressjs.png";
+import mongodb from "../../assets/images/skills/mongodb.png";
+import mysql from "../../assets/images/skills/mysql.png";
+import git from "../../assets/images/skills/git.png";
+import github from "../../assets/images/skills/github.png";
+import npm from "../../assets/images/skills/npm.png";
+import vscode from "../../assets/images/skills/vscode.png";
+import postman from "../../assets/images/skills/postman.png";
+import figma from "../../assets/images/skills/figma.png";
+
 export const skillsDetails = {
   Skills: [
     {
       name: "HTML",
-      img: "https://img.icons8.com/color/512/html-5--v1.png",
+      img: html5,
     },
     {
       name: "CSS",
-      img: "https://img.icons8.com/fluency/512/css3.png",
+      img: css3,
     },
     {
       name: "JavaScript",
-      img: "https://img.icons8.com/color/512/javascript.png",
+      img: javascript,
     },
     {
       name: "Java",
-      img: "https://img.icons8.com/?size=512&id=Pd2x9GWu9ovX&format=png",
+      img: java,
     },
     {
       name: "React",
-      img: "https://img.icons8.com/office/512/react.png",
+      img: react,
     },
     {
       name: "TypeScript",
-      img: "https://img.icons8.com/?size=96&id=uJM6fQYqDaZK&format=png",
+      img: typescript,
     },
     {
       name: "Tailwind CSS",
-      img:"https://img.icons8.com/?size=96&id=x7XMNGh2vdqA&format=png",
+      img: tailwindcss,
     },
     {
       name: "Chakra UI",
-      img: "https://img.icons8.com/color/512/chakra-ui.png",
+      img: chakraui,
     },
     {
       name: "Node JS",
-      img: "https://img.icons8.com/fluency/512/node-js.png",
+      img: nodejs,
     },
     {
       name: "BootStrap",
-      img: "https://img.icons8.com/color/512/bootstrap.png",
+      img: bootstrap,
     },
     {
       name: "Express JS",
-      img: "https://img.icons8.com/?size=128&id=2ZOaTclOqD4q&format=png",
+      img: expressjs,
     },
     {
       name: "Mongo DB",
-      img: "https://img.icons8.com/color/512/mongodb.png",
+      img: mongodb,
     },
     {
       name: "My SQL",
-      img: "https://img.icons8.com/?size=96&id=qGUfLiYi1bRN&format=png",
+      img: mysql,
     },
     // {
     //   name: "Firebase",
@@ -61,27 +81,27 @@ export const skillsDetails = {
   Tools: [
     {
       name: "Git",
-      img: "https://img.icons8.com/?size=96&id=20906&format=png",
+      img: git,
     },
     {
       name: "Github",
-      img: "https://img.icons8.com/?size=100&id=12599&format=png",
+      img: github,
     },
     {
       name: "Npm",
-      img: "https://img.icons8.com/?size=96&id=24895&format=png",
+      img: npm,
     },
     {
       name: "VS Code",
-      img: "https://img.icons8.com/?size=96&id=ezj3zaVtImPg&format=png",
+      img: vscode,
     },
     {
       name: "Postman",
-      img: "https://img.icons8.com/?size=128&id=QEQQKirln6Tf&format=png",
+      img: postman,
     },
     {
-      name: "Figam",
-      img: "https://img.icons8.com/?size=96&id=W0YEwBDDfTeu&format=png",
+      name: "Figma",
+      img: figma,
     },
   ],
 };

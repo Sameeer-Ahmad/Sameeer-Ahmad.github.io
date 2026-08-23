@@ -23,20 +23,20 @@ function Skill() {
   return (
     <div
       id="skills"
-      className="pt-20 pb-20 gap-10 xl:gap-0 lgl:flex-row items-center border-b-[1px] font-titleFont border-b-black"
+      className="pt-20 pb-20 gap-10 xl:gap-0 lgl:flex-row items-center border-b-[1px] font-titleFont border-b-themeBorder"
     >
       <div className="flex justify-center items-center text-center">
         <Title des="A showcase of my proficiency and expertise in various technologies and tools." />
       </div>
       <div className="flex justify-center ">
-        <div className="relative inline-flex p-2 bg-[#020617] rounded-full">
+        <div className="relative inline-flex p-2 bg-cardBg rounded-full shadow-shadowOne">
           <div className="flex space-x-2">
             <button
               onClick={() => handleClicks("skills")}
               className={`px-6 py-1 transition-colors duration-400 rounded-full ${
                 activeTab === "skills"
                   ? "bg-designColor text-white"
-                  : "bg-#1e293b text-white"
+                  : "text-textMuted"
               }`}
             >
               Skills
@@ -46,7 +46,7 @@ function Skill() {
               className={`px-6 py-2 transition-colors duration-400 rounded-full ${
                 activeTab === "tools"
                   ? "bg-designColor text-white"
-                  : "bg-#020617 text-white"
+                  : "text-textMuted"
               }`}
             >
               Tools
@@ -54,7 +54,7 @@ function Skill() {
           </div>
         </div>
       </div>
-      <div className="mt-14 transition-opacity duration-300 text-white flex justify-center flex-wrap">
+      <div className="mt-14 transition-opacity duration-300 text-textPrimary flex justify-center flex-wrap">
         {activeTab === "skills" &&
           skills.map((skill, index) => (
             <span

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <section
       id="footer"
-      className="w-full pt-4 pb-6 border-b-[1px] border-b-black"
+      className="w-full pt-4 pb-6 border-b-[1px] border-b-themeBorder"
     >
       <div className="flex flex-col sm:flex-row justify-center items-center sm:gap-6 xs:gap-4 gap-12">
         <div>

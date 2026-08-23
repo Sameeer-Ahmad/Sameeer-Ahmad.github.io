@@ -30,13 +30,13 @@ const LeftBanner = () => {
         <h4 className=" text-lg font-normal">
           EXPERIENCE MY PROFESSIONAL WORLD
         </h4>
-        <h1 className="xs:text-5xl sm:text-5xl text-6xl font-bold text-white">
+        <h1 className="xs:text-5xl sm:text-5xl text-6xl font-bold text-textPrimary">
           Hi, I'm{" "}
           <span className="user-detail-name text-designColor capitalize">
             Sameer
           </span>
         </h1>
-        <h2 className="xs:text-xl sm:text-2xl text-4xl  font-bold text-white">
+        <h2 className="xs:text-xl sm:text-2xl text-4xl  font-bold text-textPrimary">
           a <span className="sm:text-md">{text}</span>
           <Cursor
             cursorBlinking="false"
@@ -63,7 +63,7 @@ const LeftBanner = () => {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleResumeDownload}
-          className="w-40 h-10 bg-white font-bold text-black text-sm inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-gradient-to-r from-[#1e2024] to-[#202327] hover:text-white cursor-pointer duration-300"
+          className="w-40 h-10 bg-buttonBg font-bold text-buttonText text-sm inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-designColor hover:text-white cursor-pointer duration-300"
         >
           DOWNLOAD CV
         </a>

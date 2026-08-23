@@ -5,14 +5,14 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full pt-10 pb-20 border-b-[1px] border-b-black"
+      className="w-full pt-10 pb-20 border-b-[1px] border-b-themeBorder"
     >
       <div className="flex justify-center items-center text-center mt-10">
         <Title des="MY PROFESSIONAL JOURNEY AND THE EXPERIENCE I HAVE GAINED ALONG THE WAY." />
       </div>
       <div className="w-full flex justify-center">
         <div className="w-full max-w-3xl">
-          <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+          <div className="mt-6 lgl:mt-14 w-full border-l-[6px] border-l-designColor/25 flex flex-col gap-10">
             <ResumeCard
               title="SDE 1 — Zopping"
               subTitle="Jun 2025 - Present · Bengaluru, Karnataka, India"

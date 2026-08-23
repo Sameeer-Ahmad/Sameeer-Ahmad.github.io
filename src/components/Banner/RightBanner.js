@@ -14,7 +14,7 @@ const RightBanner = () => {
     }, []);
     return (
        <div className="w-full lgl:w-1/2 flex justify-center items-center relative pt-14">
-    <div className="relative w-[300px] h-[300px] lgl:w-[500px] lgl:h-[500px] p-3 lgl:p-5 bg-gradient-to-r from-[#1e2024] to-[#202327] shadow-shadowOne overflow-hidden">
+    <div className="relative w-[300px] h-[300px] lgl:w-[500px] lgl:h-[500px] p-3 lgl:p-5 bg-cardBg shadow-shadowOne overflow-hidden">
       <img
     className="home-img w-full h-full object-cover object-center"
     src={bannerImg}

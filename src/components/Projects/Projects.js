@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full  pt-10 pb-20 border-b-[1px] border-b-black "
+      className="w-full  pt-10 pb-20 border-b-[1px] border-b-themeBorder "
     >
       <div className="flex justify-center items-center text-center mt-10 ">
         <Title des="CHECK OUT MY WORKS, A BLEND OF CREATIVITY AND FUNCTIONALITY!" />
